@@ -19,8 +19,7 @@ function buildMetadata(sample) {
          buildGauge(data.WFREQ);
 
     })
-  
-}
+};
 
 function buildCharts(sample) {
 
@@ -35,7 +34,7 @@ function buildCharts(sample) {
       margin: { t: 0 },
       hovermode: "closests",
       xaxis: { title: "OTU ID"}
-    }
+    };
 
     let bubbleData = [
       {
@@ -49,11 +48,9 @@ function buildCharts(sample) {
           colorscale: "Earth"
         }
       }
-    ]
+    ];
 
     Plotly.plot("bubble", bubbleData, bubbleLayout);
-
-
 
     // HINT: You will need to use slice() to grab the top 10 sample_values,
     // otu_ids, and labels (10 each).
@@ -75,8 +72,8 @@ function buildCharts(sample) {
 
     Plotly.plot("pie", pieData, pieLayout);
 
-  })
-}
+  });
+};
 
 function init() {
   // Grab a reference to the dropdown select element
@@ -96,13 +93,13 @@ function init() {
     buildCharts(firstSample);
     buildMetadata(firstSample);
   });
-}
+};
 
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildCharts(newSample);
   buildMetadata(newSample);
-}
+};
 
 // Initialize the dashboard
 init();
