@@ -85,5 +85,4 @@ function buildGauge(wfreq) {
 
     let GAUGE = document.getElementById("gauge");
     Plotly.newPlot(GAUGE, data, layout);
-
 }
